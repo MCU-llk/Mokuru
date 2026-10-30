@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mokuru Construction | Civil &amp; Structural Construction, Johannesburg</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23f97316'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='900' text-anchor='middle' fill='%23090a0f' font-family='Arial'%3EM%3C/text%3E%3C/svg%3E">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mokuru Construction | Johannesburg" />
+  <meta property="og:description" content="Civil engineering, structural construction, commercial developments and site preparation across Johannesburg and Gauteng. Open 24/7." />
+  <meta property="og:locale" content="en_ZA" />
+  <meta name="theme-color" content="#090a0f" />
+  <meta name="description" content="Mokuru Construction provides civil engineering, heavy structural construction, commercial developments, and site preparation across Johannesburg and Gauteng. 24/7 Operations." />
+
+  <!-- Google Fonts: Montserrat (Headers) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Montserrat', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            safety: {
+              400: '#fb923c',
+              500: '#f97316', // Industrial Safety Orange
+              600: '#ea580c',
+            },
+            hazard: '#eab308',
+            brand: {
+              950: '#090a0f',
+              900: '#111318',
+              850: '#181b22',
+              800: '#222631',
+              700: '#323846',
+            }
+          },
+          backgroundImage: {
+            'grid-pattern': "radial-gradient(rgba(249, 115, 22, 0.12) 1px, transparent 1px)",
+            'blueprint': "linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px)",
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Alpine.js Core (deferred) -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"GeneralContractor","name":"Mokuru Construction","telephone":"+27633963695",
+   "address":{"@type":"PostalAddress","streetAddress":"Epernay Court, 43 Doris St","addressLocality":"Berea, Johannesburg","addressRegion":"Gauteng","postalCode":"2198","addressCountry":"ZA"},
+   "areaServed":"Gauteng","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}}
+  </script>
+  <script>
+    // FORM SETUP: create a free form at https://formspree.io, then paste the endpoint here (e.g. "https://formspree.io/f/abcdwxyz")
+    window.MOKURU_FORM_ENDPOINT = "";
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+
+  <style>
+    [x-cloak]{display:none !important}
+    section[id],#quote-form{scroll-margin-top:6.5rem}
+    :focus-visible{outline:2px solid #fb923c;outline-offset:2px}
+    .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:#f97316;color:#090a0f;padding:.75rem 1rem;font-weight:700}
+    .skip-link:focus{left:0}
+    @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #090a0f; }
+    ::-webkit-scrollbar-thumb { background: #222631; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+
+    /* Industrial Hazard Strip Pattern */
+    .hazard-stripe {
+      background: repeating-linear-gradient(
+        -45deg,
+        #f97316,
+        #f97316 12px,
+        #090a0f 12px,
+        #090a0f 24px
+      );
+    }
+  </style>
+</head>
+
+<body class="bg-brand-950 text-neutral-200 font-sans antialiased selection:bg-safety-500 selection:text-white" x-data="{ mobileMenu: false }">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ================= TOP UTILITY NOTIFICATION BAR ================= -->
+  <div class="bg-brand-900 border-b border-brand-800 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center space-x-4">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 font-mono text-xs font-semibold border border-emerald-500/20">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          OPEN 24/7
+        </span>
+        <span class="hidden md:inline text-neutral-400 font-mono">Johannesburg • Gauteng</span>
+      </div>
+      <div class="flex items-center space-x-6 text-neutral-300">
+        <a href="tel:0633963695" class="hover:text-safety-500 transition-colors flex items-center gap-1 font-mono">
+          <svg aria-hidden="true" class="w-3.5 h-3.5 text-safety-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Call us: 063 396 3695
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NAVIGATION BAR ================= -->
+  <header class="sticky top-0 z-50 bg-brand-950/90 backdrop-blur-md border-b border-brand-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 bg-brand-850 border border-brand-700 flex items-center justify-center rounded group-hover:border-safety-500 transition-colors relative overflow-hidden">
+            <div class="absolute inset-0 bg-safety-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <!-- Structural Crane / Beam Icon -->
+            <svg aria-hidden="true" class="w-6 h-6 text-safety-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <div>
+            <span class="font-display font-black text-2xl tracking-tight text-white block leading-none">MOKURU</span>
+            <span class="font-mono text-xs tracking-widest text-safety-500 font-bold block uppercase">Construction</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wide">
+          <a href="#services" class="text-neutral-300 hover:text-safety-500 transition-colors uppercase text-xs tracking-wider">Services</a>
+          <a href="#estimator" class="text-neutral-300 hover:text-safety-500 transition-colors uppercase text-xs tracking-wider">Estimator</a>
+          <a href="#safety" class="text-neutral-300 hover:text-safety-500 transition-colors uppercase text-xs tracking-wider">Why Mokuru</a>
+          <a href="#contact" class="text-neutral-300 hover:text-safety-500 transition-colors uppercase text-xs tracking-wider">Contact</a>
+        </nav>
+
+        <!-- CTA Action Button -->
+        <div class="hidden lg:flex items-center space-x-4">
+          <a href="#quote-form" class="relative inline-flex items-center justify-center px-6 py-2.5 text-xs font-mono font-bold tracking-wider uppercase text-brand-950 bg-safety-500 hover:bg-safety-600 rounded transition duration-200 overflow-hidden shadow-lg shadow-safety-500/20 active:translate-y-0.5">
+            <span class="relative z-10 flex items-center gap-2">
+              Request a Quote
+              <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex lg:hidden">
+          <button @click="mobileMenu = !mobileMenu" type="button" class="p-2 rounded bg-brand-850 border border-brand-700 text-neutral-300 hover:text-white" aria-label="Toggle menu" :aria-expanded="mobileMenu.toString()">
+            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="!mobileMenu">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" x-show="mobileMenu" x-cloak>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div x-show="mobileMenu" x-cloak @click.outside="mobileMenu = false" class="lg:hidden bg-brand-900 border-b border-brand-800 px-4 pt-3 pb-6 space-y-3">
+      <a @click="mobileMenu = false" href="#services" class="block py-2 text-sm font-medium text-neutral-200 hover:text-safety-500 border-b border-brand-800">Services</a>
+      <a @click="mobileMenu = false" href="#estimator" class="block py-2 text-sm font-medium text-neutral-200 hover:text-safety-500 border-b border-brand-800">Budget Estimator</a>
+      <a @click="mobileMenu = false" href="#safety" class="block py-2 text-sm font-medium text-neutral-200 hover:text-safety-500 border-b border-brand-800">Why Mokuru</a>
+      <a @click="mobileMenu = false" href="#contact" class="block py-2 text-sm font-medium text-neutral-200 hover:text-safety-500 border-b border-brand-800">Contact</a>
+      <a @click="mobileMenu = false" href="#quote-form" class="block w-full text-center py-3 bg-safety-500 text-brand-950 font-mono font-bold text-xs uppercase tracking-wider rounded">Get Quote Now</a>
+    </div>
+  </header>
+
+  <main id="main">
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative min-h-[90vh] flex items-center bg-brand-950 overflow-hidden border-b border-brand-800">
+    <!-- Blueprint Grid Effect -->
+    <div class="absolute inset-0 bg-blueprint bg-[size:48px_48px] opacity-25"></div>
+    <!-- Radial Orange Vignette -->
+    <div class="absolute -top-40 -right-40 w-[600px] h-[600px] bg-safety-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-850 border border-brand-700 rounded text-xs font-mono text-safety-400">
+            <span class="w-2 h-2 rounded-full bg-safety-500"></span>
+            CIVIL &amp; STRUCTURAL CONTRACTORS
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase leading-[1.05]">
+            Engineered For <span class="text-safety-500">Strength.</span><br />
+            Built For <span class="underline decoration-safety-500/50 decoration-4">Generations.</span>
+          </h1>
+
+          <p class="text-lg text-neutral-300 max-w-2xl leading-relaxed font-normal">
+            General contracting and civil construction in Johannesburg and across Gauteng. We build homes, commercial properties and industrial sites, and prepare the ground they stand on.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+            <a href="#estimator" class="inline-flex items-center justify-center px-8 py-4 bg-safety-500 hover:bg-safety-600 text-brand-950 font-mono font-bold text-sm tracking-wider uppercase rounded shadow-xl shadow-safety-500/25 transition">
+              Estimate my budget
+            </a>
+            <a href="tel:0633963695" class="inline-flex items-center justify-center px-8 py-4 bg-brand-850 hover:bg-brand-800 border border-brand-700 text-neutral-200 font-mono font-semibold text-sm tracking-wider uppercase rounded transition">
+              <svg aria-hidden="true" class="w-4 h-4 mr-2 text-safety-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Call us now
+            </a>
+            <a href="https://wa.me/27633963695?text=Hi%20Mokuru%2C%20I%27d%20like%20a%20quote%20for%20a%20project." target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#25D366] hover:bg-[#1fb857] text-brand-950 font-mono font-bold text-sm tracking-wider uppercase rounded transition"><svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h8M8 14h5m-9 6l1.4-4.2A8 8 0 1112 20a8 8 0 01-3.6-.9L4 20z"/></svg>WhatsApp us</a>
+          </div>
+
+          <!-- Fast Badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-brand-800/80">
+            <div>
+              <p class="font-display font-black text-2xl text-white">24/7</p>
+              <p class="text-xs font-mono text-neutral-400 uppercase">Open every day</p>
+            </div>
+            <div>
+              <p class="font-display font-black text-2xl text-safety-500">Gauteng</p>
+              <p class="text-xs font-mono text-neutral-400 uppercase">Service Area</p>
+            </div>
+            <div>
+              <p class="font-display font-black text-2xl text-white">Berea</p>
+              <p class="text-xs font-mono text-neutral-400 uppercase">Johannesburg Office</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Industrial Technical Spec Card -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-brand-900 border border-brand-700 rounded-lg p-6 sm:p-8 shadow-2xl overflow-hidden">
+            <!-- Accent Top Line -->
+            <div class="absolute top-0 left-0 right-0 h-1.5 hazard-stripe"></div>
+
+            <div class="flex items-center justify-between pb-4 border-b border-brand-800">
+              <span class="font-mono text-xs text-neutral-400 uppercase">At a glance</span>
+              <span class="inline-flex items-center gap-1.5 text-xs font-mono text-safety-400">
+                <span class="w-2 h-2 rounded-full bg-safety-500"></span> Open 24/7
+              </span>
+            </div>
+
+            <div class="space-y-4 my-6">
+              <div class="p-4 bg-brand-850 rounded border border-brand-800 space-y-1">
+                <p class="text-xs font-mono text-neutral-400 uppercase">Core work</p>
+                <p class="text-sm font-semibold text-white">Heavy Reinforced Concrete & Substructures</p>
+              </div>
+              <div class="p-4 bg-brand-850 rounded border border-brand-800 space-y-1">
+                <p class="text-xs font-mono text-neutral-400 uppercase">Headquarters</p>
+                <p class="text-sm font-semibold text-white">Epernay Court, 43 Doris St, Berea, Johannesburg</p>
+              </div>
+              <div class="p-4 bg-brand-850 rounded border border-brand-800 space-y-1">
+                <p class="text-xs font-mono text-neutral-400 uppercase">Service area</p>
+                <p class="text-sm font-semibold text-safety-400">Johannesburg and Gauteng</p>
+              </div>
+            </div>
+
+            <a href="#quote-form" class="block w-full py-3.5 bg-brand-800 hover:bg-safety-500 text-brand-950 font-mono text-xs uppercase font-bold tracking-wider text-center rounded border border-brand-700 transition">
+              Request a site visit
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CORE SERVICES ================= -->
+  <section id="services" class="py-24 bg-brand-900 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="max-w-2xl">
+        <span class="font-mono text-xs text-safety-500 tracking-widest uppercase font-bold">Services</span>
+        <h2 class="mt-2 font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight uppercase">
+          What we build
+        </h2>
+        <p class="mt-3 text-neutral-400 text-sm sm:text-base">
+          From earthworks and foundations to multi-storey structural frames, we build to South African building standards.
+        </p>
+      </div>
+
+      <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="bg-brand-950 border border-brand-800 rounded-lg p-6 hover:border-safety-500 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded bg-brand-850 border border-brand-700 flex items-center justify-center text-safety-500 group-hover:bg-safety-500 group-hover:text-brand-950 transition-colors">
+              <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 class="mt-5 font-display font-bold text-lg text-white uppercase group-hover:text-safety-500 transition-colors">General Contracting</h3>
+            <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
+              Complete turnkey project management from architectural review, resource procurement, to handover. Built in line with SANS 10400 building guidelines.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-brand-850">
+            <span class="text-xs font-mono text-safety-500 uppercase tracking-wider font-semibold">Turnkey Management</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-brand-950 border border-brand-800 rounded-lg p-6 hover:border-safety-500 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded bg-brand-850 border border-brand-700 flex items-center justify-center text-safety-500 group-hover:bg-safety-500 group-hover:text-brand-950 transition-colors">
+              <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <h3 class="mt-5 font-display font-bold text-lg text-white uppercase group-hover:text-safety-500 transition-colors">Structural Engineering</h3>
+            <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
+              Heavy structural concrete pouring, industrial rebar fabrication, load-bearing steel beam installations, and related structural work.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-brand-850">
+            <span class="text-xs font-mono text-safety-500 uppercase tracking-wider font-semibold">Load-Bearing Specs</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-brand-950 border border-brand-800 rounded-lg p-6 hover:border-safety-500 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded bg-brand-850 border border-brand-700 flex items-center justify-center text-safety-500 group-hover:bg-safety-500 group-hover:text-brand-950 transition-colors">
+              <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="mt-5 font-display font-bold text-lg text-white uppercase group-hover:text-safety-500 transition-colors">Site Prep & Earthworks</h3>
+            <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
+              Extensive land clearing, heavy mechanical excavation, trenching, bulk cut & fill, deep compaction, and soil stabilisation.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-brand-850">
+            <span class="text-xs font-mono text-safety-500 uppercase tracking-wider font-semibold">Subsurface Prep</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-brand-950 border border-brand-800 rounded-lg p-6 hover:border-safety-500 transition-all duration-300 group hover:-translate-y-1 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded bg-brand-850 border border-brand-700 flex items-center justify-center text-safety-500 group-hover:bg-safety-500 group-hover:text-brand-950 transition-colors">
+              <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            </div>
+            <h3 class="mt-5 font-display font-bold text-lg text-white uppercase group-hover:text-safety-500 transition-colors">Industrial Remodeling</h3>
+            <p class="mt-3 text-sm text-neutral-400 leading-relaxed">
+              Structural reinforcement, warehouse repurposing, commercial floor expansions, and heavy exterior facade rebuilds.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-brand-850">
+            <span class="text-xs font-mono text-safety-500 uppercase tracking-wider font-semibold">Facility Retrofit</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE ESTIMATOR (Alpine.js) ================= -->
+  <section id="estimator" class="py-24 bg-brand-950 relative border-b border-brand-800"
+    x-data="{
+      projectType: 'commercial',
+      areaSize: 0,
+      complexity: 'standard',
+      rates: {
+        civil: { standard: 6500, heavy: 9200, complex: 13500 },
+        commercial: { standard: 9800, heavy: 14000, complex: 19500 },
+        residential: { standard: 7500, heavy: 11000, complex: 16000 },
+        earthworks: { standard: 2800, heavy: 4500, complex: 7200 }
+      },
+      get estimatedMin() {
+        const rate = this.rates[this.projectType][this.complexity];
+        return Math.round((this.areaSize * rate * 0.92) / 1000) * 1000;
+      },
+      get estimatedMax() {
+        const rate = this.rates[this.projectType][this.complexity];
+        return Math.round((this.areaSize * rate * 1.15) / 1000) * 1000;
+      },
+      typeMap: { civil: 'Civil Engineering', commercial: 'Commercial Development', residential: 'Residential Construction', earthworks: 'Site Preparation & Earthworks' },
+        gradeMap: { standard: 'standard', heavy: 'reinforced', complex: 'heavy industrial' },
+        prefillDetail() {
+          if (this.areaSize === 0) return { type: this.typeMap[this.projectType], note: 'Site address and details: ' };
+          return { type: this.typeMap[this.projectType], note: 'Rough budget from website estimator: ' + this.formatZAR(this.estimatedMin) + ' to ' + this.formatZAR(this.estimatedMax) + ' excl. VAT (' + this.areaSize + ' m2, ' + this.gradeMap[this.complexity] + ' grade). Site address and details: ' };
+        },
+        formatZAR(amount) {
+        return 'R ' + amount.toLocaleString('en-ZA');
+      }
+    }">
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="font-mono text-xs text-safety-500 tracking-widest uppercase font-bold">Budget guide</span>
+        <h2 class="mt-2 font-display text-3xl sm:text-4xl font-black text-white uppercase tracking-tight">
+          Indicative budget estimator
+        </h2>
+        <p class="mt-3 text-neutral-400 text-sm">
+          Choose your project type and size to see a rough budget range. This is a guide only, not a quote. Your final price is confirmed after a site visit.
+        </p>
+      </div>
+
+      <div class="mt-12 max-w-4xl mx-auto bg-brand-900 border border-brand-800 rounded-xl p-6 sm:p-10 shadow-2xl">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Controls -->
+          <div class="space-y-6">
+            
+            <!-- 1. Project Type Selector -->
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase tracking-wider mb-2 font-semibold">1. Scope Classification</label>
+              <div class="grid grid-cols-2 gap-2">
+                <button type="button" @click="projectType = 'commercial'" :class="projectType === 'commercial' ? 'bg-safety-500 text-brand-950 border-safety-500' : 'bg-brand-850 text-neutral-300 border-brand-700 hover:border-brand-600'" class="py-2.5 px-3 rounded text-xs font-mono border transition font-bold text-center">
+                  Commercial Build
+                </button>
+                <button type="button" @click="projectType = 'civil'" :class="projectType === 'civil' ? 'bg-safety-500 text-brand-950 border-safety-500' : 'bg-brand-850 text-neutral-300 border-brand-700 hover:border-brand-600'" class="py-2.5 px-3 rounded text-xs font-mono border transition font-bold text-center">
+                  Civil Engineering
+                </button>
+                <button type="button" @click="projectType = 'residential'" :class="projectType === 'residential' ? 'bg-safety-500 text-brand-950 border-safety-500' : 'bg-brand-850 text-neutral-300 border-brand-700 hover:border-brand-600'" class="py-2.5 px-3 rounded text-xs font-mono border transition font-bold text-center">
+                  High-End Residential
+                </button>
+                <button type="button" @click="projectType = 'earthworks'" :class="projectType === 'earthworks' ? 'bg-safety-500 text-brand-950 border-safety-500' : 'bg-brand-850 text-neutral-300 border-brand-700 hover:border-brand-600'" class="py-2.5 px-3 rounded text-xs font-mono border transition font-bold text-center">
+                  Earthworks & Prep
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Area Range Slider -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="text-xs font-mono text-neutral-300 uppercase tracking-wider font-semibold">2. Target Floor / Site Footprint</label>
+                <span class="text-sm font-mono font-bold text-safety-500" x-text="areaSize + ' m²'"></span>
+              </div>
+              <input type="range" aria-label="Floor or site area in square metres" min="0" max="2500" step="25" x-model.number="areaSize" class="w-full h-2 bg-brand-850 rounded-lg appearance-none cursor-pointer accent-safety-500">
+              <div class="flex justify-between text-xs font-mono text-neutral-400 mt-1">
+                <span>0 m²</span>
+                <span>1,250 m²</span>
+                <span>2,500 m²</span>
+              </div>
+            </div>
+
+            <!-- 3. Structural Complexity -->
+            <div>
+              <label class="block text-xs font-mono text-neutral-300 uppercase tracking-wider mb-2 font-semibold">3. Engineering Grade</label>
+              <div class="grid grid-cols-3 gap-2">
+                <button type="button" @click="complexity = 'standard'" :class="complexity === 'standard' ? 'bg-safety-500 text-brand-950 border-safety-500' : 'bg-brand-850 text-neutral-300 border-brand-700'" class="py-2 px-2 rounded text-xs font-mono border font-semibold text-center">Standard</button>
+                <button type="button" @click="complexity = 'heavy'" :class="complexity === 'heavy' ? 'bg-safety-500 text-brand-950 border-safety-500' : 'bg-brand-850 text-neutral-300 border-brand-700'" class="py-2 px-2 rounded text-xs font-mono border font-semibold text-center">Reinforced</button>
+                <button type="button" @click="complexity = 'complex'" :class="complexity === 'complex' ? 'bg-safety-500 text-brand-950 border-safety-500' : 'bg-brand-850 text-neutral-300 border-brand-700'" class="py-2 px-2 rounded text-xs font-mono border font-semibold text-center">Heavy Ind.</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Dynamic Output Display -->
+          <div class="bg-brand-950 border border-brand-800 rounded-lg p-6 flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute -top-12 -right-12 w-32 h-32 bg-safety-500/10 rounded-full blur-2xl"></div>
+
+            <div>
+              <div class="flex items-center justify-between pb-3 border-b border-brand-850">
+                <span class="text-xs font-mono uppercase text-neutral-400">Indicative range</span>
+                <span class="px-2 py-0.5 rounded text-xs font-mono bg-brand-850 border border-brand-700 text-safety-400">ZAR / EXCL VAT</span>
+              </div>
+
+              <div class="mt-6 space-y-2">
+                <span class="block text-xs font-mono text-neutral-400 uppercase tracking-wider">Rough budget:</span>
+                <div class="text-3xl sm:text-4xl font-display font-black text-white tracking-tight">
+                  <span x-text="formatZAR(estimatedMin)"></span>
+                </div>
+                <div class="text-sm font-mono text-neutral-400">
+                  to <span class="font-bold text-neutral-200" x-text="formatZAR(estimatedMax)"></span>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-brand-850 space-y-1.5 text-xs text-neutral-400 font-mono">
+                <p>Guide only. Not a quotation.</p>
+                <p>Excludes VAT, professional fees and site-specific conditions.</p>
+                <p>Final price is confirmed in writing after a site visit.</p>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <a href="#quote-form" @click="$dispatch('prefill', prefillDetail())" class="block w-full text-center py-3.5 bg-safety-500 hover:bg-safety-600 text-brand-950 font-mono font-bold text-xs uppercase tracking-wider rounded shadow-md transition">
+                Request a formal quote
+              </a>
+              <p class="text-xs text-center text-neutral-400 mt-2 font-mono">Indicative only. Subject to a site visit and survey.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRUST & SAFETY BENCHMARKS ================= -->
+  <section id="safety" class="py-24 bg-brand-950 border-b border-brand-800 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <span class="font-mono text-xs text-safety-500 tracking-widest uppercase font-bold">Why Mokuru</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-black text-white uppercase tracking-tight">
+            Safety and standards on every site
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm sm:text-base">
+            Construction sites carry real risk. Mokuru Construction plans its sites with the Occupational Health and Safety Act and the Construction Regulations in mind, and builds to South African building standards.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded bg-safety-500/10 border border-safety-500/30 flex items-center justify-center shrink-0 mt-1">
+                <svg aria-hidden="true" class="w-4 h-4 text-safety-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white uppercase text-sm">Engineered structure</h4>
+                <p class="text-xs text-neutral-400 mt-1">Structural work is designed and signed off by registered professional engineers where the law requires it.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded bg-safety-500/10 border border-safety-500/30 flex items-center justify-center shrink-0 mt-1">
+                <svg aria-hidden="true" class="w-4 h-4 text-safety-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white uppercase text-sm">Available around the clock</h4>
+                <p class="text-xs text-neutral-400 mt-1">Call any time, day or night, for enquiries, site coordination and urgent work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="grid grid-cols-2 gap-4"><div class="p-6 bg-brand-900 border border-brand-800 rounded-lg"><p class="font-mono text-3xl sm:text-4xl font-extrabold text-safety-500">24/7</p><p class="mt-2 text-xs font-mono uppercase text-neutral-300 font-bold">Open every day</p><p class="mt-1 text-xs text-neutral-400">Call any time.</p></div><div class="p-6 bg-brand-900 border border-brand-800 rounded-lg"><p class="font-mono text-3xl sm:text-4xl font-extrabold text-white">SANS</p><p class="mt-2 text-xs font-mono uppercase text-neutral-300 font-bold">Building standards</p><p class="mt-1 text-xs text-neutral-400">Work built in line with SANS 10400.</p></div><div class="p-6 bg-brand-900 border border-brand-800 rounded-lg"><p class="font-mono text-3xl sm:text-4xl font-extrabold text-white">Pr.Eng</p><p class="mt-2 text-xs font-mono uppercase text-neutral-300 font-bold">Engineer sign-off</p><p class="mt-1 text-xs text-neutral-400">Where the law requires it.</p></div><div class="p-6 bg-brand-900 border border-brand-800 rounded-lg"><p class="font-mono text-3xl sm:text-4xl font-extrabold text-safety-500">Gauteng</p><p class="mt-2 text-xs font-mono uppercase text-neutral-300 font-bold">Service area</p><p class="mt-1 text-xs text-neutral-400">Based in Berea, Johannesburg.</p></div></div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= LEAD CAPTURE & CONTACT SECTION ================= -->
+  <section id="contact" class="py-24 bg-brand-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Direct Contact Card -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="font-mono text-xs text-safety-500 tracking-widest uppercase font-bold">Contact</span>
+            <h2 class="mt-2 font-display text-3xl sm:text-4xl font-black text-white uppercase tracking-tight">
+              Get in touch
+            </h2>
+            <p class="mt-3 text-neutral-400 text-sm">
+              Call us, or send your project details and we will get back to you.
+            </p>
+          </div>
+
+          <div class="space-y-4 pt-4">
+            
+            <!-- Address info -->
+            <div class="p-5 bg-brand-950 border border-brand-800 rounded-lg flex items-start gap-4">
+              <div class="w-10 h-10 rounded bg-brand-850 border border-brand-700 flex items-center justify-center shrink-0 text-safety-500">
+                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs font-mono text-neutral-400 uppercase font-semibold">Head office</p>
+                <p class="text-sm font-bold text-white mt-0.5">Epernay Court</p>
+                <p class="text-xs text-neutral-300">43 Doris St, Berea, Johannesburg, 2198</p>
+              </div>
+            </div>
+
+            <!-- Hours Info -->
+            <div class="p-5 bg-brand-950 border border-brand-800 rounded-lg flex items-start gap-4">
+              <div class="w-10 h-10 rounded bg-brand-850 border border-brand-700 flex items-center justify-center shrink-0 text-safety-500">
+                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs font-mono text-neutral-400 uppercase font-semibold">Opening hours</p>
+                <p class="text-sm font-bold text-emerald-400 mt-0.5">Open 24 Hours</p>
+                <p class="text-xs text-neutral-400">Monday through Sunday • Continuous 24/7 Operations</p>
+              </div>
+            </div>
+
+            <!-- Phone Direct -->
+            <div class="p-5 bg-brand-950 border border-brand-800 rounded-lg flex items-start gap-4">
+              <div class="w-10 h-10 rounded bg-brand-850 border border-brand-700 flex items-center justify-center shrink-0 text-safety-500">
+                <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs font-mono text-neutral-400 uppercase font-semibold">Phone</p>
+                <a href="tel:0633963695" class="text-lg font-mono font-bold text-white hover:text-safety-500 transition-colors block mt-0.5">
+                  063 396 3695
+                </a>
+                <p class="text-xs text-neutral-400">Enquiries and site coordination</p>
+              </div>
+            </div>
+
+            <a href="https://wa.me/27633963695?text=Hi%20Mokuru%2C%20I%27d%20like%20a%20quote%20for%20a%20project." target="_blank" rel="noopener" class="p-5 bg-brand-950 border border-brand-800 hover:border-[#25D366] rounded-lg flex items-center gap-4 transition">
+              <div class="w-10 h-10 rounded bg-[#25D366] flex items-center justify-center shrink-0 text-brand-950"><svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h8M8 14h5m-9 6l1.4-4.2A8 8 0 1112 20a8 8 0 01-3.6-.9L4 20z"/></svg></div>
+              <div>
+                <p class="text-xs font-mono text-neutral-400 uppercase font-semibold">WhatsApp</p>
+                <p class="text-lg font-mono font-bold text-white mt-0.5">Message us on WhatsApp</p>
+                <p class="text-xs text-neutral-400">Send photos, plans or your site location</p>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Conversion Form -->
+        <div class="lg:col-span-7" id="quote-form">
+          <div class="bg-brand-950 border border-brand-800 rounded-xl p-6 sm:p-10 shadow-2xl relative"
+            x-data="{
+              loading: false, submitted: false, error: '',
+              formData: { name: '', phone: '', email: '', projectType: 'Civil Engineering', notes: '', consent: false, website: '' },
+              async handleSubmit() {
+                this.error = '';
+                if (this.formData.website) { this.submitted = true; return; }
+                const url = window.MOKURU_FORM_ENDPOINT;
+                if (!url) { this.error = 'The online form is not switched on yet. Please call 063 396 3695.'; return; }
+                this.loading = true;
+                try {
+                  const r = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ name: this.formData.name, phone: this.formData.phone, email: this.formData.email, projectType: this.formData.projectType, notes: this.formData.notes, _subject: 'New website enquiry: ' + this.formData.name }) });
+                  if (!r.ok) throw new Error('bad status');
+                  this.submitted = true;
+                } catch (e) {
+                  this.error = 'Your enquiry could not be sent. Please try again or call 063 396 3695.';
+                } finally { this.loading = false; }
+              }
+            }" @prefill.window="formData.projectType = $event.detail.type; formData.notes = $event.detail.note">
+
+            <!-- Accent line -->
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-safety-500 to-amber-500 rounded-t-xl"></div>
+
+            <div x-show="!submitted">
+              <h3 class="font-display font-bold text-2xl text-white uppercase">Request a quote</h3>
+              <p class="text-xs text-neutral-400 font-mono mt-1">Tell us about your project and we will respond.</p>
+
+              <form @submit.prevent="handleSubmit" class="mt-6 space-y-4">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="fq-name" class="block text-xs font-mono text-neutral-300 uppercase mb-1">Full name / company *</label>
+                    <input id="fq-name" autocomplete="name" type="text" required x-model="formData.name" placeholder="e.g. Sipho Ndlovu" class="w-full bg-brand-900 border border-brand-700 rounded px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-safety-500 focus:ring-2 focus:ring-safety-500/50">
+                  </div>
+                  <div>
+                    <label for="fq-phone" class="block text-xs font-mono text-neutral-300 uppercase mb-1">Phone Number *</label>
+                    <input id="fq-phone" autocomplete="tel" type="tel" required x-model="formData.phone" placeholder="e.g. 082 123 4567" class="w-full bg-brand-900 border border-brand-700 rounded px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-safety-500 focus:ring-2 focus:ring-safety-500/50">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="fq-email" class="block text-xs font-mono text-neutral-300 uppercase mb-1">Email Address *</label>
+                    <input id="fq-email" autocomplete="email" type="email" required x-model="formData.email" placeholder="client@company.co.za" class="w-full bg-brand-900 border border-brand-700 rounded px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-safety-500 focus:ring-2 focus:ring-safety-500/50">
+                  </div>
+                  <div>
+                    <label for="fq-type" class="block text-xs font-mono text-neutral-300 uppercase mb-1">Project type</label>
+                    <select id="fq-type" x-model="formData.projectType" class="w-full bg-brand-900 border border-brand-700 rounded px-4 py-3 text-sm text-white focus:outline-none focus:border-safety-500 focus:ring-2 focus:ring-safety-500/50">
+                      <option>Civil Engineering</option>
+                      <option>Commercial Development</option>
+                      <option>Structural Concrete / Steel</option>
+                      <option>Site Preparation & Earthworks</option>
+                      <option>Industrial Renovation</option>
+                      <option>Residential Construction</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="fq-notes" class="block text-xs font-mono text-neutral-300 uppercase mb-1">Project details and location</label>
+                  <textarea id="fq-notes" rows="4" x-model="formData.notes" placeholder="Site address, size in m², whether plans exist, and when you want to start" class="w-full bg-brand-900 border border-brand-700 rounded px-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-safety-500 focus:ring-2 focus:ring-safety-500/50"></textarea>
+                </div>
+
+                <div class="hidden" aria-hidden="true"><input type="text" tabindex="-1" autocomplete="off" x-model="formData.website" name="website"></div>
+                <label class="flex items-start gap-3 text-xs text-neutral-300 cursor-pointer">
+                  <input type="checkbox" required x-model="formData.consent" class="mt-0.5 accent-safety-500">
+                  <span>I agree that Mokuru Construction may contact me about this enquiry. See the <a href="#privacy" class="underline text-safety-400">privacy notice</a>.</span>
+                </label>
+                <p x-show="error" x-cloak x-text="error" role="alert" class="text-sm text-red-400 font-semibold"></p>
+                <button type="submit" :disabled="loading" class="w-full py-4 bg-safety-500 hover:bg-safety-600 text-brand-950 font-mono font-bold text-xs uppercase tracking-widest rounded transition flex items-center justify-center space-x-2">
+                  <span x-show="!loading">Send enquiry</span>
+                  <span x-show="loading" x-cloak class="flex items-center gap-2">
+                    <svg aria-hidden="true" class="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>
+                    Sending...
+                  </span>
+                </button>
+
+                <p class="text-xs text-center text-neutral-400 font-mono">
+                  Your details are used only to respond to your enquiry.
+                </p>
+
+              </form>
+            </div>
+
+            <!-- Success Validation Banner -->
+            <div x-show="submitted" x-cloak class="py-12 text-center space-y-4">
+              <div class="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500 text-emerald-400 mx-auto flex items-center justify-center">
+                <svg aria-hidden="true" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+              </div>
+              <h3 class="font-display font-bold text-2xl text-white uppercase">Enquiry received</h3>
+              <p class="text-neutral-300 text-sm max-w-md mx-auto">
+                Thank you, <span class="text-safety-500 font-semibold" x-text="formData.name"></span>. We will review your project details and contact you as soon as possible.
+              </p>
+              <div class="p-4 bg-brand-900 border border-brand-800 rounded font-mono text-xs text-neutral-400">
+                For anything urgent, call us: <span class="text-white font-bold">063 396 3695</span>
+              </div>
+              <button @click="submitted = false" class="text-xs font-mono text-safety-500 hover:underline uppercase pt-2">
+                Send another enquiry
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PRIVACY & TERMS ================= -->
+  <!-- TODO (client): add Information Officer name/email and confirm registration with the Information Regulator. Have a lawyer review. -->
+  <section id="legal" class="py-16 bg-brand-950 border-t border-brand-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-sm text-neutral-300 leading-relaxed">
+      <div id="privacy" class="scroll-mt-28">
+        <h2 class="font-display font-bold text-xl text-white">Privacy notice (POPIA)</h2>
+        <p class="mt-3">Mokuru Construction collects the name, phone number, email address and project details you enter in our enquiry form. We use them only to respond to your enquiry and to prepare a quote. We do not sell your information. We share it only with people who need it to handle your enquiry, and keep it only as long as needed for that purpose or as the law requires.</p>
+        <p class="mt-3">You may ask to see, correct or delete your information at any time by calling 063 396 3695. You also have the right to complain to the Information Regulator of South Africa.</p>
+      </div>
+      <div id="terms" class="scroll-mt-28">
+        <h2 class="font-display font-bold text-xl text-white">Website terms</h2>
+        <p class="mt-3">The information and the budget estimator on this website are general guides only. They are not a quotation or an offer. Prices depend on a site visit, designs, engineering input and current material and labour costs, and are confirmed only in a written quotation. Any construction work is governed by a written contract agreed between you and Mokuru Construction.</p>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brand-950 border-t border-brand-800 text-neutral-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        <!-- Company Identity -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 bg-brand-850 border border-brand-700 flex items-center justify-center rounded">
+              <svg aria-hidden="true" class="w-5 h-5 text-safety-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <span class="font-display font-black text-xl text-white tracking-tight">MOKURU</span>
+          </div>
+          <p class="text-xs text-neutral-400 leading-relaxed font-sans">
+            Mokuru Construction is an engineering-first construction and infrastructure firm based in Johannesburg, delivering civil and structural construction across Gauteng.
+          </p>
+          <div class="pt-2">
+            <span class="inline-block px-3 py-1 bg-brand-900 border border-brand-800 text-xs font-mono text-safety-400 rounded">
+              Open 24/7 Everyday
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Nav -->
+        <div>
+          <h4 class="font-mono text-xs uppercase font-bold text-white tracking-wider mb-4">Core Disciplines</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#services" class="hover:text-safety-500 transition">Turnkey Contracting</a></li>
+            <li><a href="#services" class="hover:text-safety-500 transition">Structural Steel & Slabs</a></li>
+            <li><a href="#services" class="hover:text-safety-500 transition">Civil Bulk Earthworks</a></li>
+            <li><a href="#services" class="hover:text-safety-500 transition">Commercial Renovations</a></li>
+            <li><a href="#services" class="hover:text-safety-500 transition">Subsoil Stabilization</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-mono text-xs uppercase font-bold text-white tracking-wider mb-4">Operations & Tools</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="#estimator" class="hover:text-safety-500 transition">Budget estimator</a></li>
+            <li><a href="#safety" class="hover:text-safety-500 transition">Why Mokuru</a></li>
+            <li><a href="#contact" class="hover:text-safety-500 transition">Request a Site Survey</a></li>
+            <li><a href="tel:0633963695" class="hover:text-safety-500 transition">Call us</a></li>
+            <li><a href="https://wa.me/27633963695?text=Hi%20Mokuru%2C%20I%27d%20like%20a%20quote%20for%20a%20project." target="_blank" rel="noopener" class="hover:text-safety-500 transition">WhatsApp us</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Listing Location Reference -->
+        <div>
+          <h4 class="font-mono text-xs uppercase font-bold text-white tracking-wider mb-4">Head office</h4>
+          <address class="not-italic text-xs space-y-2 text-neutral-400 font-mono">
+            <p class="text-white font-bold">Mokuru Construction</p>
+            <p>Epernay Court</p>
+            <p>43 Doris St, Berea</p>
+            <p>Johannesburg, 2198</p>
+            <p class="pt-2 text-safety-500 font-bold">Tel: 063 396 3695</p>
+          </address>
+        </div>
+
+      </div>
+
+      <!-- Copyright Strip -->
+      <div class="mt-12 pt-8 border-t border-brand-800 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-neutral-400 gap-4">
+        <p>&copy; <span x-text="new Date().getFullYear()"></span> Mokuru Construction. All Rights Reserved.</p>
+        <p class="flex items-center gap-4">
+          <a href="#privacy" class="hover:text-white transition">Privacy notice</a>
+          <span>•</span>
+          <a href="#terms" class="hover:text-white transition">Website terms</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="https://wa.me/27633963695?text=Hi%20Mokuru%2C%20I%27d%20like%20a%20quote%20for%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Mokuru on WhatsApp" class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 px-4 py-3 rounded-full bg-[#25D366] hover:bg-[#1fb857] text-brand-950 font-mono font-bold text-xs uppercase shadow-xl transition" style="margin-bottom:env(safe-area-inset-bottom,0px)"><svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h8M8 14h5m-9 6l1.4-4.2A8 8 0 1112 20a8 8 0 01-3.6-.9L4 20z"/></svg><span class="hidden sm:inline">WhatsApp</span></a>
+
+</body>
+</html>
